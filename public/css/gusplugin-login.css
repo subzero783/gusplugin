@@ -21,3 +21,9 @@ body.login div#login > h1 > a {
     width: 200px;
     height: 212px;
 }
+
+/* WP Admin Footer Message */
+body.wp-admin #wpfooter #footer-left {
+    font-size: 30px;
+    color: red;
+}

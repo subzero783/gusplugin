@@ -72,10 +72,6 @@ function gusplugin_custom_login_styles() {
 add_action( 'login_enqueue_scripts', 'gusplugin_custom_login_styles' );
 
 
-
-
-
-
 // custom login message
 function gusplugin_custom_login_message( $message ) {
 	
@@ -91,6 +87,26 @@ function gusplugin_custom_login_message( $message ) {
 	
 }
 add_filter( 'login_message', 'gusplugin_custom_login_message' );
+
+
+// custom admin footer
+function gusplugin_custom_admin_footer( $message ) {
+	
+	$options = get_option( 'gusplugin_options', gusplugin_options_default() );
+	
+	if ( isset( $options['custom_footer'] ) && ! empty( $options['custom_footer'] ) ) {
+		
+		$message = sanitize_text_field( $options['custom_footer'] );
+		
+	}
+	
+	return $message;
+	
+}
+add_filter( 'admin_footer_text', 'gusplugin_custom_admin_footer' );
+
+
+
 
 
 
