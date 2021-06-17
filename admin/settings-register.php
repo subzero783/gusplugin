@@ -78,21 +78,21 @@ function gusplugin_register_settings() {
 	);
 
 	add_settings_field(
-		'custom_title',
-		'Custom Title',
-		'gusplugin_callback_field_text',
-		'gusplugin',
-		'gusplugin_section_login',
-		[ 'id' => 'custom_title', 'label' => 'Custom title attribute for the logo link' ]
-	);
-
-	add_settings_field(
 		'custom_style',
 		'Custom Style',
 		'gusplugin_callback_field_radio',
 		'gusplugin',
 		'gusplugin_section_login',
 		[ 'id' => 'custom_style', 'label' => 'Custom CSS for the Login screen' ]
+	);
+
+	add_settings_field(
+		'custom_hide_login_logo',
+		'Hide WP Login Logo',
+		'gusplugin_callback_field_radio_hide_wp_logo',
+		'gusplugin',
+		'gusplugin_section_login',
+		[ 'id' => 'custom_hide_login_logo', 'label' => 'Hide WP Login Logo' ]
 	);
 
 	add_settings_field(

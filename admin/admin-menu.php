@@ -37,7 +37,7 @@ function gusplugin_add_sublevel_menu() {
 	);
 	
 }
-add_action( 'admin_menu', 'gusplugin_add_sublevel_menu' );
+// add_action( 'admin_menu', 'gusplugin_add_sublevel_menu' );
 
 
 
@@ -69,6 +69,6 @@ function gusplugin_add_toplevel_menu() {
 	);
 	
 }
-// add_action( 'admin_menu', 'gusplugin_add_toplevel_menu' );
+add_action( 'admin_menu', 'gusplugin_add_toplevel_menu' );
 
 
