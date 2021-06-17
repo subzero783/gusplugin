@@ -1,5 +1,23 @@
 /* GusPlugin - Custom Login Styles */
 
-body.login { background-color: #e6ecf3; }
-body.login div#login form#loginform { border-radius: 10px; }
-body.login .custom-message { text-align: center; }
+body.login { 
+    background-color: #e6ecf3; 
+}
+body.login div#login form#loginform { 
+    border-radius: 10px; 
+}
+body.login .custom-message {     
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Change logo */
+body.login div#login > h1 > a {
+    background-image: url(http://localhost/fitc/wp-content/uploads/2021/06/Apex-Design-logo-colored.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 200px;
+    height: 212px;
+}

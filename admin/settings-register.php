@@ -87,15 +87,6 @@ function gusplugin_register_settings() {
 	);
 
 	add_settings_field(
-		'custom_hide_login_logo',
-		'Hide WP Login Logo',
-		'gusplugin_callback_field_radio_hide_wp_logo',
-		'gusplugin',
-		'gusplugin_section_login',
-		[ 'id' => 'custom_hide_login_logo', 'label' => 'Hide WP Login Logo' ]
-	);
-
-	add_settings_field(
 		'custom_message',
 		'Custom Message',
 		'gusplugin_callback_field_textarea',

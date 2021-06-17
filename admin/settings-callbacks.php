@@ -73,31 +73,6 @@ function gusplugin_callback_field_radio( $args ) {
 	
 }
 
-function gusplugin_callback_field_radio_hide_wp_logo(){
-	
-	$options = get_option( 'gusplugin_options', gusplugin_options_default() );
-	
-	$id    = isset( $args['id'] )    ? $args['id']    : '';
-	$label = isset( $args['label'] ) ? $args['label'] : '';
-	
-	$selected_option = isset( $options[$id] ) ? sanitize_text_field( $options[$id] ) : '';
-	
-	$radio_options = array(
-		
-		'enable'  => 'Enable WP Login Logo',
-		'disable' => 'Disable WP Login Logo'
-		
-	);
-
-	foreach ( $radio_options as $value => $label ) {
-		
-		$checked = checked( $selected_option === $value, true, false );
-		
-		echo '<label><input name="gusplugin_options['. $id .']" type="radio" value="'. $value .'"'. $checked .'> ';
-		echo '<span>'. $label .'</span></label><br />';
-		
-	}
-}
 
 
 
